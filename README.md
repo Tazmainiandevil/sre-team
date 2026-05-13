@@ -70,8 +70,12 @@ This plugin's seat roster aligns with the core operational concerns in the [Goog
 
 ## Installation
 
-```bash
-npx claude install https://github.com/Tazmainiandevil/sre-team.git
+Inside a Claude Code session:
+
+```
+/plugin marketplace add Tazmainiandevil/sre-team
+/plugin install sre-team@sre-team
+/reload-plugins
 ```
 
 ## Related
