@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "sre-team",
+  "description": "Production reliability review plugin for Claude Code.",
+  "owner": {
+    "name": "Mark Johnson",
+    "url": "https://github.com/Tazmainiandevil"
+  },
+  "plugins": [
+    {
+      "name": "sre-team",
+      "description": "Production reliability review. Spawn independent specialist reviewers to find every operational risk — blast radius, untested rollback, missing alerts, SLO violations, toil, runbook gaps, and chaos coverage. The Reliability Commander cross-correlates findings to surface compound failure chains no single reviewer would catch.",
+      "category": "development",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Tazmainiandevil/sre-team.git"
+      },
+      "homepage": "https://github.com/Tazmainiandevil/sre-team",
+      "author": {
+        "name": "Mark Johnson",
+        "url": "https://github.com/Tazmainiandevil"
+      }
+    }
+  ]
+}
