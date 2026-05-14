@@ -78,6 +78,14 @@ Inside a Claude Code session:
 /reload-plugins
 ```
 
+If prompted for an SSH key, your git is configured to use SSH for GitHub. Use the HTTPS form instead:
+
+```
+/plugin marketplace add https://github.com/Tazmainiandevil/sre-team.git
+/plugin install sre-team@sre-team
+/reload-plugins
+```
+
 ## Related
 
 - [sjsyrek/red-team](https://github.com/sjsyrek/red-team) — adversarial security review (same parallel independent pattern, security domain)
