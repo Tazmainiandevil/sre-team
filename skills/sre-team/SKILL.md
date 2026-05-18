@@ -215,6 +215,7 @@ After all Sonnet findings are in, the Commander scans Tier 1 (Critical/High) fin
 - Critical or High finding with vague or thin evidence ("may not exist", "unclear if", "assumed")
 - Two or more `chain_potential: true` findings pointing at the same component with no corroborating evidence
 - A safety-critical surface (payment, auth, core data pipeline) with shallow coverage (single finding, no evidence files cited)
+- **Three or more reviewers independently flag the same surface via absence-of-evidence reasoning** (no inline comment, no doc found, no rationale recorded). Cross-reviewer corroboration is normally a confidence signal, but identical absence-based inferences are a shared blind spot, not independent evidence. The deep-dive's job is to convert absence into either positive evidence (escalate the finding) or documentation-gap framing (downgrade it per `references/severity-guide.md`).
 
 **Spawn up to 2 targeted Opus deep-dive agents.** Each receives: the specific finding(s) to validate, the recon brief path, and a directive to either confirm with specific evidence or downgrade with rationale. Hard limit: **max 2 deep-dive agents per run** regardless of how many triggers fire.
 

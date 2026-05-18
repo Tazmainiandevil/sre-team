@@ -51,6 +51,19 @@ A domain that was checked and found clean. **Always emit info findings for clean
 
 ---
 
+## Evidence calibration — absence of inline rationale is not absence of measurement
+
+When a finding's severity rests on what's MISSING from the reviewed scope (no inline comment explaining a threshold, no SLO doc, no runbook found, no postmortem present), distinguish:
+
+- **Documentation gap** (Medium/Low): the rationale, comment, or doc doesn't exist in-repo, but the underlying work may exist out-of-band (in a dashboard, a ticket, a PR comment, the author's measurement notebook).
+- **Substantive gap** (High/Critical): positive evidence the underlying work is missing or wrong.
+
+If you have only absence-of-evidence, the finding is the documentation gap. Do not escalate to substantive unless you have positive evidence — e.g., you ran the relevant query and the baseline is at or above threshold, you searched all likely SLO locations and confirmed none records this service, you traced the alert routing and it has no destination team.
+
+Remediation for documentation gaps is cheap (record the rationale inline). Remediation for substantive gaps is expensive (re-derive the value, define the SLO, build the runbook). Calibrate severity to the cost of the actual remediation.
+
+---
+
 ## Compound chain severity
 
 Compound chains are rated **one level above the highest component finding**:

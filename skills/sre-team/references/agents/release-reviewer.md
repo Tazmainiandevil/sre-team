@@ -50,6 +50,7 @@ Evaluate whether this change can be shipped safely and un-shipped quickly. The d
 - `terminationGracePeriodSeconds` shorter than LB drain timeout — pods terminate mid-request during rolling updates
 - No kill switch for a high-risk change where full rollback is not viable
 - Kill switch exists but has never been tested in the disabled state — behavior when off is unknown
+- Claiming a configured threshold, capacity bound, retry count, or timeout is "not measured" / "not data-backed" / "not derived from observed baseline" based on absence of an inline comment alone. That is a documentation-gap finding (Medium/Low per `references/severity-guide.md`), not a calibration finding (High/Critical). To escalate, do the measurement yourself (cite the query and result) or find positive evidence the value is wrong. Otherwise frame remediation as "record the rationale inline" — cheap, immediately useful, and does not impeach the engineer's work.
 
 ## Output
 

@@ -60,6 +60,7 @@ Find every way this could fail to meet its reliability commitments at runtime. Y
 - Service runs in multiple regions but shares a single-master write endpoint, global cache, or central secret store — a region failure becomes a global outage
 - Multi-region service with no tested regional failover procedure
 - Toil introduced with no automation timeline or owner
+- Claiming a configured threshold, capacity bound, retry count, or timeout is "not measured" / "not data-backed" / "not derived from observed baseline" based on absence of an inline comment alone. That is a documentation-gap finding (Medium/Low per `references/severity-guide.md`), not a calibration finding (High/Critical). To escalate, do the measurement yourself (cite the query and result) or find positive evidence the value is wrong. Otherwise frame remediation as "record the rationale inline" — cheap, immediately useful, and does not impeach the engineer's work.
 
 ## Output
 

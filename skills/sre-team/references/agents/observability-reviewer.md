@@ -50,6 +50,7 @@ Every failure mode must be detectable before users report it. Every SLI must mea
 - New metrics with unbounded label cardinality (user IDs, request IDs, free-form strings as label values)
 - SLO alerting uses simple error rate threshold rather than multi-window burn rate — fires after breach, not before
 - Alert routing points to a shared catch-all or wrong team — real on-call is never notified
+- Claiming a configured threshold, SLO target, alert boundary, or sample rate is "not measured" / "not data-backed" / "not derived from observed baseline" based on absence of an inline comment alone. That is a documentation-gap finding (Medium/Low per `references/severity-guide.md`), not a calibration finding (High/Critical). To escalate, query the metric yourself (cite the query and result) or find positive evidence the value is wrong. Otherwise frame remediation as "record the rationale inline" — cheap, immediately useful, and does not impeach the engineer's work.
 
 ## Output
 

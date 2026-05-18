@@ -72,6 +72,15 @@
 <!-- Architecture constraints, known risks, out-of-scope areas extracted from CLAUDE.md -->
 <!-- "No CLAUDE.md present" if absent -->
 
+## Out-of-band context
+
+<!-- Information reviewers cannot derive from the repo alone but is needed to assess findings correctly. -->
+<!-- Examples: -->
+<!--   "Threshold X was calibrated by the author against historical data in <dashboard> as of <date> — derivation not recorded in repo" -->
+<!--   "Architectural decision recorded in PR #N comments, not in code" -->
+<!--   "Capacity assumption verified out-of-band via load test on <date>" -->
+<!-- "None known" if the Commander has no such context — that absence is itself a signal: reviewer claims of "no measurement" or "no rationale" should default to documentation-gap framing rather than substantive-gap framing. -->
+
 ## Opt-in seats activated
 
 <!-- List of opt-in seats added for this run and why -->
